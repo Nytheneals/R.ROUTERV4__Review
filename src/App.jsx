@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Talk from "./Talk";
+import Topic from "./components/Topics";
 
 // ***********************************OTHER COMPONENTS*********************************** //
 
@@ -38,7 +38,7 @@ class App extends Component {
           </ul>
           <hr />
           <Route exact path="/" component={Home} />
-          <Route path="/topics" component={Talk} />
+          <Route path="/topics" component={Topic} />
           <Route path="/about" component={About} />
         </div>
       </Router>
