@@ -64,18 +64,26 @@ h6 {
 
 .nav {
   margin: 0 auto;
-  width: 450px;
+  width: 700px;
+  text-decoration: none;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .nav2 {
   text-align: center;
   grid-gap: 2.5px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  text-decoration: none;
 }
 
 .item p {
   margin: 0 0 5px 0;
+}
+
+.result {
+  font-size: 35px;
+  text-decoration-style: wavy;
+  text-transform: uppercase;
 }

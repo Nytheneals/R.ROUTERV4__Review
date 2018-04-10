@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Topic from "./components/Topics";
+import Topic from "./Topics";
 
 // ***********************************OTHER COMPONENTS*********************************** //
 
