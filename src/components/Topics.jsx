@@ -20,11 +20,7 @@ const Topic = ({ match }) => (
     </div>
 
     <Route path="/topics/:urlID" component={Top} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h1>What would you like to do</h1>}
-    />
+    <Route exact path={match.url} render={() => <h1>Checkout</h1>} />
   </div>
 );
 
