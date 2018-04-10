@@ -24,19 +24,17 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/topics">Topic </Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-          <hr />
+        <div className="nav">
+          <div className="item">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="item">
+            <Link to="/topics">Topic </Link>
+          </div>
+          <div className="item">
+            <Link to="/about">About</Link>
+          </div>
+
           <Route exact path="/" component={Home} />
           <Route path="/topics" component={Topic} />
           <Route path="/about" component={About} />

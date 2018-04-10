@@ -1,43 +1,3 @@
-ul {
-  list-style: none;
-
-  display: grid;
-  grid-auto-columns: 1fr 1fr 1fr;
-}
-
-li {
-  background: greenyellow;
-  border: 2px solid yellow;
-  width: 120px;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @Nytheneals
-Sign out
-0
-0 0 Nytheneals/GRIDDY_Templates
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-GRIDDY_Templates/assets/style.css
-4ffab84  28 days ago
-@Nytheneals Nytheneals Created Quicksite 1.html
-
-72 lines (61 sloc)  1.55 KB
-/*
-  Oh Hello!
-  These are some base styles so that our tutorial looks good.
-  Let's go through the important bits real quick
-*/
-
 :root {
   --yellow: #ffc600;
   --black: #272727;
@@ -89,23 +49,31 @@ h6 {
 
 /* Each item in our grid will contain numbers */
 
-li {
+.item {
   /* We center the contents of these items. You can also do this with flexbox too! */
   display: grid;
   justify-content: center;
-
   align-items: center;
   border: 5px solid rgba(0, 0, 0, 0.03);
   border-radius: 3px;
   font-size: 15px;
   background-color: #ffc600;
+  padding: 10px;
   /* best colour */
 }
 
-ul {
+.nav {
+  margin: 0 auto;
+  width: 450px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
+}
+.nav2 {
+  text-align: center;
+  grid-gap: 2.5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .item p {

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from "react";
+import { Route, Link } from "react-router-dom";
 
 const Top = ({ match }) => (
   <div>
@@ -7,28 +7,25 @@ const Top = ({ match }) => (
   </div>
 );
 
-class Topic extends Component {
-  render() {
-    return (
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/topics/bookings">Bookings</Link>
-            </li>
-            <li>
-              <Link to="/topics/locations">Locations </Link>
-            </li>
-            <li>
-              <Link to="/topics/packages">Packages</Link>
-            </li>
-          </ul>
+const Topic = ({ match }) => (
+  <div className="nav2">
+    <div className="item">
+      <Link to={`${match.url}/bookings`}>Bookings</Link>
+    </div>
+    <div className="item">
+      <Link to={`${match.url}/locations`}>Locations </Link>
+    </div>
+    <div className="item">
+      <Link to={`${match.url}/packages`}>Packages</Link>
+    </div>
 
-          <Route path="/topics/:urlID" component={Top} />
-        </div>
-      </Router>
-    );
-  }
-}
+    <Route path="/topics/:urlID" component={Top} />
+    <Route
+      exact
+      path={match.url}
+      render={() => <h1>What would you like to do</h1>}
+    />
+  </div>
+);
 
 export default Topic;
